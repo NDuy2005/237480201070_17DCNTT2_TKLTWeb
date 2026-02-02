@@ -1,0 +1,14 @@
+<form name="form13A">
+    Số hạng 1: <input type="text" name="SoHang1"> <br>
+    Số hạng 2: <input type="text" name="SoHang2"> <br>
+    <input type="button" name="TinhTong" value="Tính tổng" onclick="tinhTong()"> <br>
+    Kết quả: <input type="text" name="KetQua">
+</form>
+
+<script>
+    function tinhTong() {
+        var s1 = parseFloat(document.form13A.SoHang1.value);
+        var s2 = parseFloat(document.form13A.SoHang2.value);
+        document.form13A.KetQua.value = s1 + s2;
+    }
+</script>

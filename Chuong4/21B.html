@@ -1,0 +1,29 @@
+<form name="form21B">
+    Số 01: <input type="text" name="So01"> <br>
+    Số 02: <input type="text" name="So02"> <br>
+    
+    <input type="radio" name="pt" value="+"> Cộng
+    <input type="radio" name="pt" value="-"> Trừ
+    <input type="radio" name="pt" value="*"> Nhân
+    <input type="radio" name="pt" value="/"> Chia
+    <br>
+    <input type="button" name="Tinh" value="Tính" onclick="tinh21B()"> <br>
+    Kết quả: <input type="text" name="Ketqua">
+</form>
+
+<script>
+    function tinh21B() {
+        var a = parseFloat(document.form21B.So01.value);
+        var b = parseFloat(document.form21B.So02.value);
+        var ops = document.form21B.pt;
+        var op = "";
+        for(var i=0; i<ops.length; i++) {
+            if(ops[i].checked) op = ops[i].value;
+        }
+        
+        if(op == '+') document.form21B.Ketqua.value = a + b;
+        else if(op == '-') document.form21B.Ketqua.value = a - b;
+        else if(op == '*') document.form21B.Ketqua.value = a * b;
+        else if(op == '/') document.form21B.Ketqua.value = a / b;
+    }
+</script>

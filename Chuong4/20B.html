@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 20B: Tính lương tự động</title>
+    <style>
+        /* CSS đơn giản để làm đẹp form */
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        label { display: inline-block; width: 150px; margin-bottom: 10px; }
+        input[type="text"] { width: 200px; padding: 5px; }
+        h3 { color: blue; }
+        .result-group { background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 20px;}
+    </style>
+</head>
+<body>
+
+    <h3>Bài 20B: Tính lương nhân viên (Tự động cập nhật)</h3>
+
+    <form name="form20B">
+        <div>
+            <label>Họ tên nhân viên:</label>
+            <input type="text" name="HoTen">
+        </div>
+        <div>
+            <label>Năm vào làm:</label>
+            <input type="text" name="NamVaoLam" onkeyup="tinhLuong()">
+        </div>
+        <div>
+            <label>Hệ số lương:</label>
+            <input type="text" name="HeSo" onkeyup="tinhLuong()">
+        </div>
+        <div>
+            <label>Lương cơ sở:</label>
+            <input type="text" name="LuongCoSo" onkeyup="tinhLuong()">
+        </div>
+
+        <div class="result-group">
+            <div>
+                <label>Lương cơ bản:</label>
+                <input type="text" name="LuongCoBan" readonly>
+            </div>
+            <div>
+                <label>Phụ cấp (25%):</label>
+                <input type="text" name="PhuCap" readonly>
+            </div>
+            <div>
+                <label>Thâm niên (năm):</label>
+                <input type="text" name="ThamNien" readonly>
+            </div>
+            <div>
+                <label style="font-weight: bold;">Thành tiền:</label>
+                <input type="text" name="ThanhTien" style="font-weight: bold; color: red;" readonly>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        function tinhLuong() {
+            // 1. Lấy đối tượng form
+            var f = document.form20B;
+
+            // 2. Lấy giá trị từ các ô nhập liệu
+            var namVaoLam = parseInt(f.NamVaoLam.value);
+            var heSo = parseFloat(f.HeSo.value);
+            var luongCoSo = parseFloat(f.LuongCoSo.value);
+            
+            // Lấy năm hiện tại của hệ thống
+            var namHienTai = new Date().getFullYear();
+
+            // 3. Kiểm tra xem người dùng đã nhập đủ số chưa để tránh lỗi NaN
+            if (!isNaN(namVaoLam) && !isNaN(heSo) && !isNaN(luongCoSo)) {
+                
+                // --- TÍNH TOÁN THEO CÔNG THỨC ĐỀ BÀI ---
+                
+                // Lương Cơ Bản = Hệ số * Lương Cơ Sở
+                var luongCB = heSo * luongCoSo;
+
+                // Phụ Cấp = 25% * Lương Cơ Bản
+                var phuCap = 0.25 * luongCB;
+
+                // Thâm Niên = Năm hiện tại - Năm vào làm
+                var thamNien = namHienTai - namVaoLam;
+
+                // Thành Tiền = Lương Cơ Bản + Phụ Cấp
+                var thanhTien = luongCB + phuCap;
+
+                // 4. Xuất kết quả ra các ô Textbox tương ứng
+                f.LuongCoBan.value = luongCB;
+                f.PhuCap.value = phuCap;
+                f.ThamNien.value = thamNien;
+                f.ThanhTien.value = thanhTien;
+            }
+        }
+    </script>
+
+</body>
+</html>

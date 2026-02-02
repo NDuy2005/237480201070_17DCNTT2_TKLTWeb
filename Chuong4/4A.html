@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bài tập 4A</title>
+    <script>
+        // Hàm hiển thị nội dung
+        function HienThi() {
+            // Lấy giá trị từ textbox có tên là msg04 trong form4a
+            var noidung = document.form4a.msg04.value;
+            
+            alert(noidung);
+            alert("Bạn hãy nhập vào ô text và thử lại !");
+        }
+    </script>
+</head>
+<body>
+    <h3>Bài tập 4A: Lấy nội dung trong Textbox</h3>
+    
+    <form name="form4a">
+        <input type="text" name="msg04" value="Chào">
+        
+        <input type="button" name="Chao" value="Chào" onclick="HienThi()">
+    </form>
+</body>
+</html>

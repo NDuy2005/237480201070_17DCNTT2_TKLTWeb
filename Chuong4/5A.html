@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đang tải thời gian...</title>
+</head>
+<body>
+
+    <h3>Bài tập 5A: Hiển thị Giờ và Phút trên thanh tiêu đề</h3>
+    <p><b>Hướng dẫn:</b> Bạn hãy nhìn lên <u>Tab của trình duyệt</u> (phần trên cùng) để thấy kết quả thay đổi.</p>
+
+    <script type="text/javascript">
+        // 1. Khai báo đối tượng Date để lấy thời gian hiện tại của máy tính
+        var D = new Date();
+
+        // 2. Lấy giờ và phút
+        var gio = D.getHours();      // Lấy giờ (0 - 23)
+        var phut = D.getMinutes();   // Lấy phút (0 - 59)
+
+        // 3. Hiển thị thông tin lên thanh tiêu đề (document.title)
+        // Cộng chuỗi để tạo thành câu hoàn chỉnh
+        document.title = "Bây giờ là: " + gio + " giờ " + phut + " phút.";
+    </script>
+
+</body>
+</html>

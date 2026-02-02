@@ -1,0 +1,13 @@
+<h3>Bài 8A: Mở trang web</h3>
+<input type="button" value="Chọn trang web" onclick="moTrangWeb()">
+<script>
+    function moTrangWeb() {
+        var so = prompt("Nhập số (1: BLU, 2: CTU, 3: VNDoc, Khác: Meta): ", "1");
+        switch (so) {
+            case "1": window.open("http://blu.edu.vn"); break;
+            case "2": window.open("http://ctu.edu.vn"); break;
+            case "3": window.open("https://vndoc.com"); break;
+            default:  window.open("https://meta.vn");
+        }
+    }
+</script>

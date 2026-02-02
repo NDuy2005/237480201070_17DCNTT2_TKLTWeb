@@ -1,0 +1,17 @@
+<h3>Bài 4B: Hiển thị thông tin</h3>
+<form name="form4b">
+    <input type="button" name="hoten" value="Họ tên" onclick="cthoten()">
+    <input type="button" name="donvi" value="Đơn vị" onclick="ctdonvi()">
+    <br><br>
+    Textbox 1: <input type="text" name="txthoten" value="Chào">
+    Textbox 2: <input type="text" name="txtdonvi" value="Đơn vị">
+</form>
+
+<script>
+    function cthoten() {
+        document.form4b.txthoten.value = "Ngô Nhật Duy"; // Thay tên bạn vào đây
+    }
+    function ctdonvi() {
+        document.form4b.txtdonvi.value = "Đại học Bạc Liêu";
+    }
+</script>

@@ -1,0 +1,44 @@
+<form name="Calculator">
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" name="ManHinh" id="ketqua" style="width: 100%; text-align: right;">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="Calculator.ManHinh.value += '0'"></td>
+            <td><input type="button" value="1" onclick="Calculator.ManHinh.value += '1'"></td>
+            <td><input type="button" value="2" onclick="Calculator.ManHinh.value += '2'"></td>
+            <td><input type="button" value="3" onclick="Calculator.ManHinh.value += '3'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="Calculator.ManHinh.value += '4'"></td>
+            <td><input type="button" value="5" onclick="Calculator.ManHinh.value += '5'"></td>
+            <td><input type="button" value="6" onclick="Calculator.ManHinh.value += '6'"></td>
+            <td><input type="button" value="7" onclick="Calculator.ManHinh.value += '7'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="8" onclick="Calculator.ManHinh.value += '8'"></td>
+            <td><input type="button" value="9" onclick="Calculator.ManHinh.value += '9'"></td>
+            <td><input type="button" value="+" onclick="Calculator.ManHinh.value += '+'"></td>
+            <td><input type="button" value="-" onclick="Calculator.ManHinh.value += '-'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="*" onclick="Calculator.ManHinh.value += '*'"></td>
+            <td><input type="button" value="/" onclick="Calculator.ManHinh.value += '/'"></td>
+            <td><input type="button" value="=" onclick="tinhKetQua22A()"></td>
+            <td><input type="button" value="C" onclick="Calculator.ManHinh.value = ''"></td>
+        </tr>
+    </table>
+</form>
+
+<script>
+    function tinhKetQua22A() {
+        try {
+            // Hàm eval sẽ tính toán chuỗi phép tính trong textbox
+            document.Calculator.ManHinh.value = eval(document.Calculator.ManHinh.value);
+        } catch(e) {
+            alert('Lỗi phép tính!');
+        }
+    }
+</script>

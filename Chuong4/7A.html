@@ -1,0 +1,14 @@
+<h3>Bài 7A: Tính tuổi (Validate)</h3>
+<input type="button" value="Chạy bài 7A" onclick="tinhTuoi7A()">
+<script>
+    function tinhTuoi7A() {
+        var D = new Date();
+        var namHienTai = D.getFullYear();
+        var namSinh;
+        do {
+            namSinh = prompt("Nhập năm sinh (phải <= " + namHienTai + "):", "");
+        } while (parseInt(namSinh) > namHienTai);
+        
+        alert("Tuổi của bạn là: " + (namHienTai - namSinh));
+    }
+</script>

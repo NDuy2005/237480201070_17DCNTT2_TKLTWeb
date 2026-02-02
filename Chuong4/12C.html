@@ -1,0 +1,14 @@
+<form name="form12C">
+    Họ: <input type="text" name="Ho"> <br>
+    Tên: <input type="text" name="Ten"> <br>
+    <input type="button" name="HienThi" value="Hiển thị" onclick="hienThiHoTen()"> <br>
+    Họ và tên: <input type="text" name="Hoten">
+</form>
+
+<script>
+    function hienThiHoTen() {
+        var ho = document.form12C.Ho.value;
+        var ten = document.form12C.Ten.value;
+        document.form12C.Hoten.value = ho + " " + ten;
+    }
+</script>

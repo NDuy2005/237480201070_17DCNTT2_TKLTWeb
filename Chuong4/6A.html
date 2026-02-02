@@ -1,0 +1,10 @@
+<h3>Bài 6A: Tính tuổi</h3>
+<script>
+    var D = new Date();
+    var namHienTai = D.getFullYear();
+    var namSinh = prompt("Bài 6A: Bạn sinh năm bao nhiêu?", "");
+    if(namSinh != null && namSinh != "") {
+        var tuoi = namHienTai - parseInt(namSinh);
+        document.write("Tuổi của bạn là: " + tuoi);
+    }
+</script>

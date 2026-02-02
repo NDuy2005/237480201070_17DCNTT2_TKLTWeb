@@ -1,0 +1,21 @@
+<form name="form21A">
+    Số 01: <input type="text" name="So01"> <br>
+    Số 02: <input type="text" name="So02"> <br>
+    Kết quả: <input type="text" name="Ketqua"> <br>
+    
+    <input type="button" value="Cộng" onclick="tinh21A('+')">
+    <input type="button" value="Trừ" onclick="tinh21A('-')">
+    <input type="button" value="Nhân" onclick="tinh21A('*')">
+    <input type="button" value="Chia" onclick="tinh21A('/')">
+</form>
+
+<script>
+    function tinh21A(op) {
+        var a = parseFloat(document.form21A.So01.value);
+        var b = parseFloat(document.form21A.So02.value);
+        if(op == '+') document.form21A.Ketqua.value = a + b;
+        if(op == '-') document.form21A.Ketqua.value = a - b;
+        if(op == '*') document.form21A.Ketqua.value = a * b;
+        if(op == '/') document.form21A.Ketqua.value = a / b;
+    }
+</script>
