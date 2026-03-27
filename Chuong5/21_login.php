@@ -14,7 +14,7 @@ if ($user != "" && $email != "" && $pass != "") {
     $_SESSION['Username'] = $user;
     $_SESSION['Email'] = $email;
     
-    // In ra giao diện thành công giống trong sách
+    // In ra giao diện 
     echo "
     <div style='border: 1px solid black; border-radius: 10px; width: 350px; padding: 20px; margin: 20px auto; text-align: center; font-family: Arial;'>
         <div style='font-weight: bold; text-transform: uppercase; margin-bottom: 15px;'>Trang Xử Lý Thông Tin Đăng Nhập</div>

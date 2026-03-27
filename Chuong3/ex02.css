@@ -21,9 +21,9 @@ body {
     max-width: 800px;
     margin: 50px auto;
     
-    border: 5px double #333;
+    /*border: 5px double #333;*/
     
-    /* 2. CHỈNH SỬA: Đây là màu nền BÊN TRONG khung */
+    
     background-color: #2a7699; 
     
     padding: 30px;
@@ -31,5 +31,5 @@ body {
 }
 
 html {
-    background-color: white; /* Hoặc #f0f0f0 (xám nhạt) nếu muốn thấy rõ khung */
+    background-color: white; 
 }

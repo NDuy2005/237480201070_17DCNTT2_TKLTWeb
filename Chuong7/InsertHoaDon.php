@@ -8,7 +8,7 @@ $mahang = $_POST['txtMaHang'];
 $soluong = $_POST['txtSoLuong'];
 $thanhtien = $_POST['txtThanhTien'];
 
-// Viết câu lệnh SQL bám sát file CSDL của bạn
+// Viết câu lệnh SQL file CSDL của bạn
 $sql = "INSERT INTO HOADON (mahd, makh, mahang, soluong, thanhtien) 
         VALUES ('$mahd', '$makh', '$mahang', '$soluong', '$thanhtien')";
 
