@@ -1,4 +1,4 @@
-<table border="1" cellspacing="0" cellpadding="0">
+<table border="10" cellspacing="10" cellpadding="10">
 <?php
 for ($dong = 1; $dong <= 8; $dong++) {
     echo "<tr>";
